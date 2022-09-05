@@ -1,0 +1,47 @@
+/*
+ * DataFormatter.sim: to save timeseries with the jgrassgears format
+ */
+
+import static oms3.SimBuilder.instance as OMS3
+// define the path of the current project
+def home = oms_prj
+
+OMS3.sim {
+    
+	//define the local path of .jar files
+    resource "$oms_prj/lib"    
+    model() {
+    
+        components {
+        
+            "formatter" "dataHandler.DataHendler"
+
+        }
+        
+        parameter {
+   		
+            // define the local path of input data
+            "formatter.pathInputData"   "${home}/data/data0.csv"
+          
+            // define the local path of the output file
+            "formatter.pathOutputData"  "${home}/data/data_formatted0.csv"
+          
+            // define the start date of the timeseries
+            "formatter.startDate"       "2009-01-01 00:00"
+          
+            // define the time step of the timeseries expressed in minutes
+            "formatter.tTimestep"       60  
+          
+            // separetor of data
+            "formatter.separetor"       ","
+          
+            // number of columns before the data value
+            "formatter.numberOfColumns" 1
+            
+            // no value data
+            "formatter.fileNovalue"     "-9999"
+        
+        }
+            
+    }
+}
