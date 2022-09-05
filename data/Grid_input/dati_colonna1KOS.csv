@@ -1,0 +1,4 @@
+Type,eta,K,thetaS,thetaR,Ks,sigma,alphaSpecificStorage,betaSpecificStoragee
+L,0.0,100,0.43,0.089,1.9447e-07,1.59,1e-8,4.4e-10
+L,-0.5,50,0.41,0.057,4.0528e-05,1.26475,1e-8,4.4e-10
+L,-1.5,-999,-999,-999.0,-999,-999,-999,-999
